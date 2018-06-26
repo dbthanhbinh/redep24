@@ -1,0 +1,117 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:7px 0pt 10px;
+	font-size: 10pt;
+	width: 99%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 5px !important;
+	background-color: #FFF;
+	vertical-align: middle;
+	text-align: center;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+table.center thead tr th{
+	text-align: center;
+}
+
+
+
+div.shopping-template{}
+div.donhanglancuoi{
+	padding: 10px;
+		display: inline-block;
+		width: 97%;
+}
+div.donhanglancuoi-l{float: left; width: 48%}
+div.donhanglancuoi-r{float: right; width: 48%;}
+
+div.donhanglancuoi-l p,div.donhanglancuoi-r p{float: left; width: 100%; margin: 5px 0; line-height: 20px;}
+div.donhanglancuoi-l p.title,div.donhanglancuoi-r p.title{font-weight: bold;}
+div.donhanglancuoi-l p label,div.donhanglancuoi-r p label{float: left; width: 25%; text-align: left;}
+div.donhanglancuoi-l p span,div.donhanglancuoi-r p span{text-align: left; float: left;}
+
+div.shop-item-subtotal{float: left; width: 100%; border-top: 1px solid #ddd;}
+div.shop-item-subtotal p{margin: 5px 0; line-height: 20px;}
+div.shopping-items-content,div.shop-item-header{float: left; width: 100%;}
+
+div.shop-item-header{background: url("../images/bg2.png") repeat-x; width: 100%; font-weight: bold; font-size: 16px;}
+div.shop-item-header .col3{float:left; width:24%}
+div.shop-item-header .col4{float:left; width:15%}
+div.shop-item-header .col5{float:left; width:15%}
+div.shop-item-header .col6{float:left; width:15%}
+div.shop-item-header .col8{float:left; width:30%}
+
+
+div.shopping-items-content .col3{float:left; width:38%}
+div.shopping-items-content .col3 a{float: left; line-height: 22px; text-align: left; text-decoration: none;}
+div.shopping-items-content .col5{float:left; width:15%}
+div.shopping-items-content .col4{float:left; width:18%}
+div.shopping-items-content .col6{float:left; width:28%}
+
+div.shop-item-subtotal-left{float: left; width: 40%}
+div.shop-item-subtotal-right{float: right; width: 35%;}
+div.shop-item-subtotal-right p label {float: left; text-align:right; width: 45%; font-weight: bold;}
+div.shop-item-subtotal-right p { padding-bottom: 5px;}
+div.shop-item-subtotal-right p.end-tongcong{margin-bottom: 20px; color: #ff0000; font-size: 18px; border-top: 1px solid #ff0000; padding-top: 10px; font-weight: bold;}
+
+div.lancuoi-left{float: left; width: 73%; border-right: 1px solid #ddd}
+div.lancuoi-right{float: right; width: 26%}
+
+div.lancuoi-right textarea{
+	
+	float: left;
+	width: 100%;	
+	margin: 0;
+	padding: 5px;
+	line-height: 20px;
+	border: 1px solid #eeeeee;
+}
+
+div.lancuoi-left .shop-item{
+	float: left;
+	width: 100%;
+	border-top: 1px solid hsl(0, 0%, 87%);
+	padding: 5px 0;	
+}
+
+div#pager{float: left; width: 100%; position: inherit !important;}
+
+div.list-option-filter{}
+div.list-option-filter label{float: left; margin-right: 7px; line-height: 25px;}
+div.list-option-filter select{float: left; width: 100px; margin-right: 10px!important;}
+
+div#mypageprint{display: block; width: 98%; margin: auto;}
+
+
+div.myreports{position: absolute; top: 70px; right: 35px;}
+div.myreports a{}
+div.myreports a img{width: 18px;}

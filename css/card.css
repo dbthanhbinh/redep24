@@ -1,0 +1,42 @@
+.f_card{padding-top:20px;}
+
+.title_f_card{font-size:18px; color:#E47911; padding:0 10px 20px 10px; position:relative;}
+.title_f_card span{position:absolute; top:0; right:10px; background:#FDA700; color:#fff; padding:5px; font-size:15px;}
+.main_f_card{padding:0 10px;}
+.main_f_card table{width:100%;}
+.main_f_card table td{padding:10px;}
+.main_f_card table thead{border-bottom:2px solid #E47911;}
+.main_f_card table thead td{background:#f9f9f9; font-weight:bold;}
+.main_f_card table tbody tr{border-bottom:1px solid #dcdcdc;}
+
+.sp_i_card{width:80px; height:80px;}
+.sp_i_card table{width:100%; height:100%;}
+.sp_i_card table tbody tr{border-bottom:none !important;}
+.sp_i_card table td{vertical-align:middle; text-align:center; padding:0 !important;}
+.sp_i_card table td img{max-width:80px; max-height:80px;}
+
+.price_card{font-size:15px; color:#cc6600;}
+
+.name_pgh{color:#004B91;}
+.name_pgh a{color:#004B91;}
+.name_pgh a:hover{color:#cc6600; text-decoration:underline;}
+
+.sl_pgh{border:1px solid #ccc; width:30px; text-align:center; padding:5px 0;}
+
+.btn_card_item{padding:30px 0 0 0;}
+.btn_card_item ul li{float:right; padding-left:10px;}
+
+.btn_cgh{
+	background:url(../images/layout/icon_shop.png) no-repeat 0px -945px;
+	width:144px; height:35px;
+	border:none;
+	cursor:pointer;
+}
+.btn_cgh:hover{background-position:0px -980px;}
+
+.btn_qgh{
+	background:url(../images/layout/icon_shop.png) no-repeat 0px -1015px;
+	width:196px; height:35px;
+	display:inline-block;	
+}
+.btn_qgh:hover{background-position:0px -1050px;}

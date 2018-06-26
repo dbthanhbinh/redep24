@@ -1,0 +1,2 @@
+[02-Jun-2016 12:22:54 America/New_York] PHP Fatal error:  Call to undefined function get_header() in /home/gmcvn/public_html/redep24.com/wp-content/themes/redep24/index.php on line 1
+[02-Jun-2016 12:23:29 America/New_York] PHP Fatal error:  Call to undefined function get_header() in /home/gmcvn/public_html/redep24.com/wp-content/themes/redep24/index.php on line 1

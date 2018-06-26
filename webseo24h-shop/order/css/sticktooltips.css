@@ -1,0 +1,40 @@
+/*tooltip.css*/
+
+.stickytooltip{
+box-shadow: 5px 5px 8px #818181; /*shadow for CSS3 capable browsers.*/
+-webkit-box-shadow: 5px 5px 8px #818181;
+-moz-box-shadow: 5px 5px 8px #818181;
+display:none;
+position:absolute;
+display:none;
+border:5px solid black; /*Border around tooltip*/
+background:white;
+z-index:3000;
+}
+
+
+
+
+.stickytooltip .atip 
+{
+width:392px; float:left; position:relative;
+padding:10px;
+color:#05436d;
+}
+
+.stickytooltip .atip pre {
+white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ font-size:11px;
+ margin-top:10px;	
+}
+.stickytooltip .atip .label-thongso{
+	float:left;
+	position:relative;
+	width:190px;
+	margin-left:10px;
+	font-weight:bold;
+}

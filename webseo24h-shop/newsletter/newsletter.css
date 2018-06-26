@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 24, 2015, 10:23:43 PM
+    Author     : thanhbinh
+*/
+.popup_300_popup_content{display: block; background-color: #fff;}
+
+.popup_300_title{
+    color: #fff;
+    width: 95%;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: #FDA700;
+    padding-left: 5%;
+    font-size: 16px;
+    font-weight: bold;
+}
+.popup_300_content{
+    padding: 10px;
+    line-height: 20px;
+}
+.popup_300_popup_content .popupclosebtn{bottom: 0; top: initial;}

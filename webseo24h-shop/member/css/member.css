@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 8, 2015, 6:52:58 PM
+    Author     : thanhbinh
+*/
+
+#member_processing_mess{color: #ff0000;}
+
+.popupclosebtn{position: absolute; top: 0; right: 0;}
+.popupclosebtn a{
+    background-image: url("../images/close.png");
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 23px;
+    display: block;
+    background-position:0 0;
+}

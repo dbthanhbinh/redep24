@@ -1,0 +1,71 @@
+/**************************************** BEGIN IE6 ****************************************/
+*html body{behavior: url(../js/whateverhover.htc);}
+*html .ipt_s{line-height:32px;}
+*html .ipt_dknm{line-height:28px;}
+*html .sp_i_info_tool table td img{width:50px; height:50px;}
+*html .sp_i_wf table td img{width:150px; height:150px;}
+*html .m_dmsp{border:1px solid #ccc; border-top:none; width:213px; top:34px;}
+
+*html .c_header{z-index:1111;}
+*html .mn_child_tool li{display:inline-block;}
+*html .mn_child_tool li a{line-height:16px !important;}
+
+*html .ipt_ddg{line-height:24px;}
+
+*html .ipt_sl_sp{line-height:20px;}
+
+*html .sp_i_spmc table td img{width:110px; height:110px;}
+*html #slider2 .fl_sl table td img{width:470px; height:470px;}
+
+*html .f_spd ul li{display:inline-block;}
+*html .f_spd{background:#f9f9f9;}
+
+*html .sp_i_card table td img{width:80px; height:80px;}
+
+/**************************************** END IE6 ****************************************/
+
+/**************************************** BEGIN IE7 ****************************************/
+
+*+html .ipt_s{line-height:32px;}
+*+html .ipt_dknm{line-height:28px;}
+*+html .m_dmsp{border:1px solid #ccc; border-top:none; width:213px; top:34px;}
+
+*+html .c_header{z-index:1111;}
+*+html .mn_child_tool li{display:inline-block;}
+*+html .mn_child_tool li a{line-height:16px !important;}
+
+*+html .wrap_prod{padding-top:15px;}
+*+html .m_bcn_tlsp{width:213px !important; overflow:hidden !important;}
+
+*+html .ipt_ddg{line-height:24px;}
+
+*+html .ipt_sl_sp{line-height:20px;}
+
+*+html .sp_i_wf table td img{width:150px; height:150px;}
+*+html .sp_i_spmc table td img{width:110px; height:110px;}
+*+html #slider2 .fl_sl table td img{width:470px; height:470px;}
+
+*+html .flexslider{overflow:hidden;}
+
+*+html .f_spd ul li{display:inline-block;}
+*+html .f_spd{background:#f9f9f9;}
+
+*+html .sp_i_card table td img{width:80px; height:80px;}
+
+/**************************************** END IE7 ****************************************/
+
+/**************************************** BEGIN IE8 ****************************************/
+@media \0screen {
+	.ipt_s{line-height:32px;}
+	.ipt_dknm{line-height:28px;}
+	.sp_i_info_tool table td img{width:50px; height:50px;}
+	.sp_i_wf table td img{width:150px; height:150px;}
+	.m_dmsp{border:1px solid #ccc; border-top:none; width:213px; top:34px;}
+	.btn_dknm{top:13px;}
+	.ipt_ddg{line-height:24px;}
+	.ipt_sl_sp{line-height:20px;}
+	.sp_i_spmc table td img{width:110px; height:110px;}
+	#slider2 .fl_sl table td img{width:470px; height:470px;}
+	.sp_i_card table td img{width:80px; height:80px;}
+}
+/**************************************** END IE8 ****************************************/
