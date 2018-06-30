@@ -12,11 +12,11 @@ var rev = require('gulp-rev');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function () {
-    return gulp.src('./assets/sass/**/*.scss')
+    return gulp.src('./assets/sass/style.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(minifyCss())
-        .pipe(rename('responsive.min.css'))
+        .pipe(rename('style.min.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./assets/css'))
         .pipe(livereload());

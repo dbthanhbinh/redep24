@@ -112,8 +112,7 @@ function webseo24h_tie_update_showpostview($post_id)
 /*-----------------------------------------------------------------------------------*/
 function tie_get_home_cats($cat_data){
 
-	switch( $cat_data['type'] ){
-	
+	switch( $cat_data['type'] ){	
 		case 'n':
 			get_home_cats( $cat_data );
 			break;

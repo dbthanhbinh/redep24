@@ -1,0 +1,50 @@
+.search_top_header {
+    max-width: 300px;
+    margin: 0 auto;    
+    position: relative;
+    top: 25px;
+    z-index: 1;
+
+    form {
+        border:1px solid #ccc;    
+        padding:1px;
+        background:#fff;
+        -webkit-border-radius: 03px;
+        -moz-border-radius: 03px;
+        border-radius: 03px;
+        position: relative;
+        .select_item_search{            
+            border-right:1px solid #d4d4d4;	
+            background:url(../images/layout/select_item_search.png) repeat-x;
+            float:left;
+            width: 80px;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        .select_input_search{
+            float: left;
+            width: 100%;
+            padding-left: 80px;        
+            
+            input[type='text']{
+                height:32px; width:100%;
+                border:none;
+                color:#959494;
+                font-size:12px;
+                padding: 0 10px;
+            }
+        }
+
+        .btn_s{
+            background:url(../images/layout/icon_shop.png) no-repeat;
+            width:85px; 
+            height:30px;
+            border:none;
+            position:absolute;
+            top:1px; right:1px;	
+            cursor:pointer;
+        }
+    }
+}

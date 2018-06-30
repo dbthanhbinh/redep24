@@ -47,7 +47,7 @@ function process_ajax_load_data_tab(mydata)
             dataType:'json',
             data	: mydata,
             beforeSend: function(){
-                $(mydata.myholddata).html("Xử lý...");
+                // $(mydata.myholddata).html("Xử lý...");
             },				
             success:function(msg)
             {
@@ -76,7 +76,9 @@ jQuery(function($){
             $(this).parent().find(".toggle-head-open").show();
     });
     
-    
+    $('#ct_dmsp_parent').click(function(){
+        $(this).parent().toggleClass('open');
+    });
 });
 
 

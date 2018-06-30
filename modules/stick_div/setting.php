@@ -28,5 +28,5 @@ function webseo24h_stick_div_script()
 <?php
 }
 
-add_action("wp_head", 'webseo24h_stick_div_script');
+// add_action("wp_footer", 'webseo24h_stick_div_script');
 

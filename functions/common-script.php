@@ -13,12 +13,7 @@
 function webseo24h_styles() 
 {
     ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/css.css"/>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/frame_script.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/same_height_columns.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.bxslider.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/publicjs.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/css.css"/>    
     
     <!--[if IE 6]>
         <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/DD_belatedPNG_0.0.8a.js"></script>

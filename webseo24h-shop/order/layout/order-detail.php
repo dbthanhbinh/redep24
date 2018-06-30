@@ -7,18 +7,7 @@ if(isset($_GET['action']) && $_GET['action']=='View' && isset($_GET['id']) && in
     {
         $orderdata = $order->order_get_order_by_id($orderid);        
         $orderReceived = json_decode($orderdata['orderbook']);
-        $orderDetailData = $orderDetail->get_list_order_detail($orderid);
-        
-        //print_r($orderdata);
-        /*
-        $userdata = get_user_meta($orderdata['customerId'], $member->userMetaExtra, true);
-        
-        $orderDetailData = $orderDetail->get_list_order_detail($orderdata['ID']);
-        $orderReceived = json_decode($orderdata['orderbook']);
-        //print_r(json_decode($orderdata['orderReceived']));
-         * 
-         * 
-         */
+        $orderDetailData = $orderDetail->get_list_order_detail($orderid);       
     ?>
 
     <div id="mypageprint" style="position: relative;">
@@ -65,7 +54,7 @@ if(isset($_GET['action']) && $_GET['action']=='View' && isset($_GET['id']) && in
                                     <div style="margin:2px 0; border-bottom: 1px solid #a8d59d; float:left; width:100%"><label style="float:left; width:150px; padding:0 5px;">Thạng thái thanh toán : </label><strong style="color:#ff0000;"><?php echo $orderdata['paymentStatus'];?></strong></div>
                                     <div style="margin:2px 0; border-bottom: 1px solid #a8d59d; float:left; width:100%"><label style="float:left; width:150px; padding:0 5px;">Phương thức thanh toán : </label><strong><?php echo $orderdata['paymentMethod'];?></strong></div>
                                     <div style="margin:2px 0; border-bottom: 1px solid #a8d59d; float:left; width:100%"><label style="float:left; width:150px; padding:0 5px;">Vận chuyển : </label><strong><?php echo $orderdata['shipPing'];?></strong></div>
-                                    <div style="margin:2px 0; border-bottom: 1px solid #a8d59d; float:left; width:100%"><label style="float:left; width:150px; padding:0 5px;">Ghi chú thanh toán : </label><strong style="color:#ff0000;"><?php echo $orderdata['orderStatusNote'];?></strong></div>
+                                    <div style="margin:2px 0; border-bottom: 1px solid #a8d59d; float:left; width:100%"><label style="float:left; width:150px; padding:0 5px;">Ghi chú thanh toán : </label><strong style="color:#ff0000;"><?= (isset($orderdata['orderStatusNote']) && $orderdata['orderStatusNote']) ? $orderdata['orderStatusNote'] : ''?></strong></div>
                                     <div style="margin:2px 0; float:left; width:100%">
                                         <label style="float:left; width:150px; padding:0 5px;">Ghi chú khách hàng : </label><strong><?php echo $orderdata['orderNote'];?></strong>
                                     </div>
@@ -83,7 +72,7 @@ if(isset($_GET['action']) && $_GET['action']=='View' && isset($_GET['id']) && in
                                         <div style="margin:2px 0; border-bottom: 1px solid #a8d59d; float:left; width:100%"><label style="float:left; width:100px; padding:0 5px;">Địa chỉ : </label><strong>
                                             <?php 
                                             echo $orderReceived->order_address;
-                                            if($orderReceived->order_district)
+                                            if( isset($orderReceived->order_district) && $orderReceived->order_district)
                                                 echo ' - ' . $orderReceived->order_district;
                                             if($orderReceived->order_cities)
                                                 echo ' - ' . $orderReceived->order_cities;
@@ -101,7 +90,7 @@ if(isset($_GET['action']) && $_GET['action']=='View' && isset($_GET['id']) && in
                                         <div style="margin:2px 0; float:left; width:100% "><label style="float:left; width:100px; padding:0 5px;">Địa chỉ : </label><strong>
                                             <?php 
                                             echo $orderReceived->received_address;
-                                            if($orderReceived->received_district)
+                                            if( isset($orderReceived->received_district) && $orderReceived->received_district)
                                                 echo ' - ' . $orderReceived->received_district;
                                             if($orderReceived->received_cities)
                                                 echo ' - ' . $orderReceived->received_cities;

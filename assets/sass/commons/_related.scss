@@ -1,0 +1,25 @@
+.related-list{
+    .title_spc_S{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 20px;
+        color:$main_color;
+        border-bottom:1px dashed #ccc;
+        padding-bottom: 10px;
+    }
+}
+
+.spnmc{
+    clear: both;
+    
+    h4{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        color: $main_color;
+        border-bottom: 1px dashed #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+}

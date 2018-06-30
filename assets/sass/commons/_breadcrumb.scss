@@ -1,0 +1,30 @@
+.breacrum_pd{
+    margin-top: 20px;
+    border-bottom:1px solid #ccc; 
+    height:32px; 
+    line-height:32px; 
+    overflow:hidden; 
+    padding-left: 10px; 
+    font-size: 13px;
+
+    a{
+        color:#666; 
+        padding:0 3px;
+
+        &:hover{color:#FDA700;}
+    }
+    ul{
+        li{
+            float:left;
+            a{
+                color:#666; 
+                padding:0 12px 0 10px; 
+                background:url(../images/layout/arrow_breacrum.png) no-repeat right;
+
+                &:hover{color:#FDA700; text-decoration:underline;}
+            }
+
+            &:last-child a{background:none; padding-right:0;}
+        }
+    }
+}

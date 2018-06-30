@@ -1011,7 +1011,7 @@ function member_layout_show_menu_top_member($is_login)
         $html = ' 
             <li class="li_dktv li_tools">
                     <span>
-                            <a class="t_dktv" href="#" id="member_register_act" title="">Đăng ký thành viên</a>
+                            <a class="t_dktv" href="#" id="member_register_act" title="">Đăng ký</a>
                 </span>
             </li>
             <li class="li_tk li_tools">

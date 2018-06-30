@@ -1,10 +1,9 @@
 <div class="slider_B">
-
         <div class="tab_khung">
         <span class="t_span1">
-            <span class="tab1" id_tab="1">Sản phẩm mới nhất</span>
-            <span class="tab2" id_tab="2">Sản phẩm xem nhiều nhất</span>
-            <span class="tab3" id_tab="3">Sản phẩm đang HOT</span>
+            <span class="tab1" id_tab="1">Mới nhất</span>
+            <span class="tab2" id_tab="2">Xem nhiều</span>
+            <span class="tab3" id_tab="3">Đang HOT</span>
         </span><!-- End .t_span1 -->
         <div class="clear"></div>
     </div><!-- End .tab_khung -->
@@ -24,27 +23,20 @@
 
     <script type="text/javascript">
         $(document).ready(function(){	
-
             $(".tab_khung .t_span1 span").css("cursor","pointer");
             $(".tab2").attr("style","color:#e77911").css({"cursor":"pointer", "background":"url(<?php echo get_template_directory_uri();?>/images/layout/t_span1.png) no-repeat center bottom"});	
             //$(".tab_nd").load("tab_ajax2.html");
-
-
             var myholddata = ".tab_nd";
             var mydata = {"action":"ajax_act_load_tab_new_views_hot","tabid":2,"myholddata":myholddata};                        
             process_ajax_load_data_tab(mydata);
-
-
             $(".tab_khung .t_span1 span").click(function(){                                
-                    var id_tab=$(this).attr("id_tab");
-
-                    //$(".tab_nd").load("tab_ajax"+id_tab+".html");
-                    var myholddata = ".tab_nd";
-                    var mydata = {"action":"ajax_act_load_tab_new_views_hot","tabid":id_tab,"myholddata":myholddata};                        
-                    process_ajax_load_data_tab(mydata);
-
-                    $(".tab_khung .t_span1 span").attr("style","background:#fff").css("cursor","pointer");
-                    $(".tab"+id_tab).attr("style","color:#e77911").css({"cursor":"pointer", "background":"url(<?php echo get_template_directory_uri();?>/images/layout/t_span1.png) no-repeat center bottom"});
+                var id_tab=$(this).attr("id_tab");
+                //$(".tab_nd").load("tab_ajax"+id_tab+".html");
+                var myholddata = ".tab_nd";
+                var mydata = {"action":"ajax_act_load_tab_new_views_hot","tabid":id_tab,"myholddata":myholddata};                        
+                process_ajax_load_data_tab(mydata);
+                $(".tab_khung .t_span1 span").attr("style","background:#fff").css("cursor","pointer");
+                $(".tab"+id_tab).attr("style","color:#e77911").css({"cursor":"pointer", "background":"url(<?php echo get_template_directory_uri();?>/images/layout/t_span1.png) no-repeat center bottom"});
             });			
 
         });

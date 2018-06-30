@@ -24,27 +24,24 @@ function get_home_recent( $cat_data ){
 	else $args[ 'no_found_rows' ] = 1 ;
 	
 	$cat_query = new WP_Query( $args ); 
-        ?>
-
+    ?>
         <div class="block_prodduct">
-                    
-                <?php if($Box_logo):?>  
+            <?php if($Box_logo):?>  
                 <h2 class="title_product <?php echo $Box_Style;?>">                                          
                     <a href="<?php echo $Box_url;?>"><img src="<?php echo $Box_logo;?>" alt="<?php echo $Box_Title;?>"/></a>                                           
-                </h2><!-- End .title_product1 -->
-                 <?php 
-                    else:
-                    ?>   
-                    <h2 class="<?php echo $Box_Style;?>_title_2">
-                        <label><?php echo $Box_Title;?></label>
-                    </h2>
-                    <?php
-                    endif;
-                    ?>
+                </h2>
+                <?php 
+                else:
+                ?>   
+                <h2 class="<?php echo $Box_Style;?>_title_2">
+                    <label><?php echo $Box_Title;?></label>
+                </h2>
+            <?php
+                endif;
+            ?>
 
-                <div class="m_b_p" id="cha_float1">
-
-                    <?php if($Box_bigimage && $Box_bigimage_show=='y'):?>
+            <div class="m_b_p" id="cha_float1">
+                <?php if($Box_bigimage && $Box_bigimage_show=='y'):?>
                     <div class="f_Float1" <?php if($Box_bigimage_pos=='left') echo 'style="float:left;"';?>>
                         
                         <?php if($Box_url!=''):?>
@@ -59,62 +56,26 @@ function get_home_recent( $cat_data ){
                         endif;
                         ?>                        
                     </div><!-- End .f_Fw2 -->
+                <?php endif;?>
+
+                <div class="f_Float2">
+                    <div class="row">
+                    <?php if($cat_query->have_posts()):?>
+                        <?php while ($cat_query->have_posts()):$cat_query->the_post();?>
+                            <?php 
+                            get_template_part('page-templates/tpl', 'loop')
+                            ?>
+                        <?php endwhile;?>
                     <?php endif;?>
+                    </div>    
+                </div><!-- End .f_Fw1 -->
 
-                    <div class="f_Float2">
+                <div class="clear"></div>
 
-                            <div class="full_width">
+            </div><!-- End .m_b_p -->
 
-                            <ul>
-                                <?php if($cat_query->have_posts()):?>
-                                <?php 
-                                    while ($cat_query->have_posts()):$cat_query->the_post();
-                                    $postmetas = get_post_custom(get_the_ID());
-                                    
-                                    $price      = isset($postmetas[$wpdb->prefix.'price'][0]) ? $postmetas[$wpdb->prefix.'price'][0] : '';
-                                    $discount   = isset($postmetas[$wpdb->prefix.'discount'][0]) ? $postmetas[$wpdb->prefix.'discount'][0] : '';
-                                ?>
-                                    <li>
-                                        <div class="overflow_box">  
-                                            <div class="sp_i_wf">
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="<?php the_permalink();?>" title="<?php the_title();?>">
-                                                                <?php 
-                                                                if(has_post_thumbnail())
-                                                                    the_post_thumbnail('thumbnail');
-                                                                ?>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div><!-- End .sp_i_wf -->
-                                            <?php 
-                                               webseo24h_tie_format_price_discount_show_return($price, $discount, true);
-                                            ?>
-                                            <div class="name_wf">
-                                                    <a href="<?php the_permalink();?>" title="<?php the_title();?>">
-                                                        <?php the_title();?>
-                                                    </a>
-                                            </div><!-- End .name_wf -->
-                                            
-                                        </div>    
-                                    </li>
-                                <?php endwhile;?>
-                                <?php endif;?>
-                                
-                            </ul>
+        </div><!-- End .block_prodduct -->
 
-                        </div><!-- End .full_width -->
-
-                    </div><!-- End .f_Fw1 -->
-
-                    <div class="clear"></div>
-
-                </div><!-- End .m_b_p -->
-
-            </div><!-- End .block_prodduct -->
-
-        <?php
+    
+    <?php
 }

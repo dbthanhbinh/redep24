@@ -98,7 +98,7 @@ function valid_elementFormInputUser()
     return false;    
 }
 
-jQuery(function($){
+(function($){
     
     // register process form
     $('#member_register_act').live('click',function(){

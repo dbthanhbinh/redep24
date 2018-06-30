@@ -1,4 +1,4 @@
-<div class="breacrum_pd">
+<div class="breacrum_pd col-lg-12 col-md-12 mb-12">
     <ul>
         <li>
                 <a href="#" title="">Trang chủ</a>

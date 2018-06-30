@@ -1,0 +1,36 @@
+nav{
+    &.c_header{
+        min-height:80px; 
+        background:#fff url(../images/layout/c_header.png) 
+        repeat-x bottom; 
+        position:relative;
+        top: -35px;
+        z-index: 50;
+    }
+
+    &.navbar-dark .navbar-collapse .nav-link{
+        color: #555759;
+    }
+
+    &.navbar-dark .navbar-nav .nav-link:focus, 
+    &.navbar-dark .navbar-nav .nav-link:hover,
+    &.navbar-dark .navbar-collapse .active>.nav-link, 
+    &.navbar-dark .navbar-collapse .nav-link.active, 
+    &.navbar-dark .navbar-collapse .nav-link.show, 
+    &.navbar-dark .navbar-collapse .show>.nav-link{
+        color: #fda700;
+    }
+
+    .logo1 img{
+        max-width: 200px;
+    }
+
+    .ul_mn_b_header li {
+        float: left;
+        text-transform: capitalize;
+        font-size: 13px;
+        background-image: url(../images/layout/line_ul_mn_b_header.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+}

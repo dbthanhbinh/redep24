@@ -63,7 +63,7 @@ function ajax_load_fc_ajax_act_load_tab_new_views_hot()
 
             <div class="m_slider_B">
 
-                    <ul>';
+                    <div class="row">';
                     
                     if($tab_views->have_posts())
                     {
@@ -76,7 +76,7 @@ function ajax_load_fc_ajax_act_load_tab_new_views_hot()
                             $discount   = $postmetas[$wpdb->prefix.'discount'][0];
                             
                             $html .= ' 
-                                <li>
+                                <div class="col-lg-4 col-md-4 mb-12">
                                     <div class="sp_i_m_slider_B">
                                     <table>
                                             <tr>
@@ -99,8 +99,7 @@ function ajax_load_fc_ajax_act_load_tab_new_views_hot()
                             $html .= webseo24h_tie_format_price_discount_show_return($price, $discount, FALSE);           
                             $html .= ' 
                                     </div><!-- End .info_m_slider_B -->
-                                    <div class="clear"></div>
-                                </li>
+                                </div>
                                     ';
                             
                         }
@@ -111,7 +110,7 @@ function ajax_load_fc_ajax_act_load_tab_new_views_hot()
                     wp_reset_postdata();
                     
             $html .= ' 
-                    </ul>
+                    </div>
 
                 <div class="clear"></div>
 

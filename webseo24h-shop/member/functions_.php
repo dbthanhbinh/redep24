@@ -124,10 +124,6 @@ add_action( 'wp_ajax_nopriv_ajax_act_member_register_process', 'ajax_load_fc_aja
 
 
 function member_scripts() {
-
     echo '<script src="'.  get_template_directory_uri().'/webseo24h-shop/member/js/memberjs.js" type="text/javascript"></script>';
-    echo '<link rel="stylesheet" type="text/css" href="'.  get_template_directory_uri().'/webseo24h-shop/member/css/member.css"/>
-';
-        
 }
-add_action( 'wp_head', 'member_scripts' );
+add_action( 'wp_footer', 'member_scripts' );

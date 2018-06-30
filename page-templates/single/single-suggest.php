@@ -150,18 +150,18 @@
         <link rel="stylesheet" type="text/css" href="<?php ws24h_tie_show_resource_url('');?>/css/jquery.mCustomScrollbar.css"/>
         <script type="text/javascript" src="<?php ws24h_tie_show_resource_url('');?>/js/jquery.mCustomScrollbar.js"></script>
         <script type="text/javascript">
-                                                    (function($){
-                                                            $(window).load(function(){
-                                                                    $(".content_5").mCustomScrollbar({
-                                                                            horizontalScroll:true,
-                                                                            scrollButtons:{
-                                                                                    enable:true
-                                                                            },
-                                                                            theme:"dark-thin"
-                                                                    });
-                                                            });
-                                                    })(jQuery);
-                                            </script>
+            (function($){
+                $(window).load(function(){
+                    $(".content_5").mCustomScrollbar({
+                            horizontalScroll:true,
+                            scrollButtons:{
+                                    enable:true
+                            },
+                            theme:"dark-thin"
+                    });
+                });
+            })(jQuery);
+        </script>
     </div><!-- End .m_spmc -->
 
 </div><!-- End .spnmc -->

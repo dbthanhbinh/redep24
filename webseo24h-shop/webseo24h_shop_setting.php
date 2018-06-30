@@ -14,25 +14,18 @@ if(tie_get_option("shop_setting_display"))
     $sessionID = session_id();  // get session id
     @ini_set("memory_limit","80M");
 
-    function webseo24h_scripts() {
+    function webseo24h_style_shop() {
+        echo '<link href="'.  get_template_directory_uri().'/webseo24h-shop/css/shopping.css" rel="stylesheet" type="text/css" />';
+        echo '<link href="'.  get_template_directory_uri().'/webseo24h-shop/member/css/member.css" rel="stylesheet" type="text/css"/>';
+    }
+    add_action( 'wp_head', 'webseo24h_style_shop' );
 
+    function webseo24h_scripts() {
         echo '<script src="'.  get_template_directory_uri().'/webseo24h-shop/js/shopjs.js" type="text/javascript"></script>';
         echo '<script src="'.  get_template_directory_uri().'/webseo24h-shop/js/public.js" type="text/javascript"></script>';
-        echo '<script src="'.  get_template_directory_uri().'/webseo24h-shop/js/validate.js" type="text/javascript"></script>';
-        echo '<link href="'.  get_template_directory_uri().'/webseo24h-shop/css/shopping.css" rel="stylesheet" type="text/css" />';
-        /*
-        echo "\n <script type='text/javascript'>\n\t";
-        echo "var mytheme_urls = {";
-        echo "\n \t\tajaxurl:'".admin_url('admin-ajax.php' )."'";
-        echo "\n \t\t,url:'".get_site_url()."'";
-        echo "\n \t\t,sourceurl:'".  get_template_directory_uri()."/images/'";
-        echo "\n \t\t,shopurl:'".  get_template_directory_uri()."/webseo24h-shop/images/'";
-        echo "\n\t};\n";
-        echo " </script>\n";
-         * 
-         */
+        echo '<script src="'.  get_template_directory_uri().'/webseo24h-shop/js/validate.js" type="text/javascript"></script>';        
     }
-    add_action( 'wp_head', 'webseo24h_scripts' );
+    add_action( 'wp_footer', 'webseo24h_scripts' );
 
     // include country
     require_once 'publics/country.php';

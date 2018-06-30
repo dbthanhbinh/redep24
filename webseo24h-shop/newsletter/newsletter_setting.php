@@ -8,10 +8,10 @@
 function newsletter_style_script()
 {
     echo '<link rel="stylesheet" type="text/css" href="'.  get_template_directory_uri().'/webseo24h-shop/newsletter/newsletter.css"/>';
-    echo '<script type="text/javascript" src="'.  get_template_directory_uri().'/webseo24h-shop/newsletter/newsletter.js"></script>';
+    // echo '<script type="text/javascript" src="'.  get_template_directory_uri().'/webseo24h-shop/newsletter/newsletter.js"></script>';
 }
 
-add_action('wp_head', 'newsletter_style_script');
+add_action('wp_footer', 'newsletter_style_script');
 
 class newsletter
 {
@@ -68,18 +68,14 @@ class newsletter
     public function newsletter_layout($show)
     {
         $html = ' 
-            <ul>
-                    <li><b>Đăng ký nhận Email</b></li>
-                <li>
-                    <form>
-                        <input class="ipt_dknm" id="newsletter_input" type="text" placeholder="Email của bạn..."/>
-                        <input class="btn_dknm" id="act_newsletter_btn" type="button" value="&nbsp;"/>
-                    </form>
-                </li>
-                <li>'.$this->newsletter_slogan.'</li>
-            </ul>
-            <div class="clear"></div>
-                ';
+            <div class="col-lg-6 col-md-6 mb-6">
+                <form class="newsletter_form">
+                    <input class="ipt_dknm" id="newsletter_input" type="text" placeholder="Email của bạn..."/>
+                    <input class="btn_dknm" id="act_newsletter_btn" type="button" value="&nbsp;"/>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-6">'.$this->newsletter_slogan.'</div>
+            ';
         if($show)
             echo $html;
         else

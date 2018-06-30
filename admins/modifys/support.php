@@ -113,17 +113,17 @@
                     </p>
 			<h4><label for="support_name">Họ tên </label></h4> 
 			<div class="input-text-wrap"> 
-				<input type="text" name="support_name" id="support_name" tabindex="1" autocomplete="off" value="<?php echo $_POST['support_name']; ?>" /> 
+				<input type="text" name="support_name" id="support_name" tabindex="1" autocomplete="off" value="<?= (isset($_POST['support_name']) && $_POST['support_name']) ? $_POST['support_name'] : '' ?>" /> 
 			</div> 
 			 
 			<h4><label for="support_mail">Địa chỉ email</label></h4> 
 			<div class="input-text-wrap"> 
-				<input type="text" name="support_mail" id="support_mail" tabindex="2" autocomplete="off" value="<?php echo $_POST['support_email']; ?>" /> 
+				<input type="text" name="support_mail" id="support_mail" tabindex="2" autocomplete="off" value="<?= (isset($_POST['support_email']) && $_POST['support_email']) ? $_POST['support_email'] : '' ?>" /> 
 			</div> 
 			 
 			<h4><label for="support_phone">Điện thoại</label></h4> 
 			<div class="input-text-wrap"> 
-				<input type="text" name="support_phone" id="support_phone" tabindex="3" autocomplete="off" value="<?php echo $_POST['support_phone']; ?>" /> 
+				<input type="text" name="support_phone" id="support_phone" tabindex="3" autocomplete="off" value="<?= (isset($_POST['support_phone']) && $_POST['support_phone']) ? $_POST['support_phone'] : '' ?>" /> 
 			</div>  
 			 
 			<h4><label for="support_title">Tiêu đề</label></h4> 
@@ -133,7 +133,7 @@
 	 
 			<h4><label for="support_content">Nội dung yêu cầu hỗ trợ</label></h4> 
 			<div class="textarea-wrap"> 
-				<textarea name="support_content" id="support_content" class="mceEditor" rows="3" cols="15" tabindex="5"><?php echo $_POST['support_content']; ?></textarea> 
+				<textarea name="support_content" id="support_content" class="mceEditor" rows="3" cols="15" tabindex="5"><?= (isset($_POST['support_content']) && $_POST['support_content']) ? $_POST['support_content'] : '' ?></textarea> 
 			</div> 
 	 
 			<p class="submit"> 

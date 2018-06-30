@@ -491,7 +491,7 @@ jQuery(function($){
     
     
     // received other address infomation
-    $('#received_address').live('change',function(){
+    $('#received_address').on('change',function(){
         var received_address = $(this).is(":checked");        
         db_process_received_address(received_address);
         public_process_change_info_shop();
@@ -505,17 +505,17 @@ jQuery(function($){
     });
     
     // use voucher click btn
-    $("#use_voucher_code").live('click',function(){        
+    $("#use_voucher_code").on('click',function(){        
         public_process_change_info_shop();
     });
     
     // fill voucher code
-    $('#voucher_code').live('keydown',function(){	        
+    $('#voucher_code').on('keydown',function(){	        
         public_process_check_email_for_voucher_code();    
     });
     
     /***** btn book this order ******/    
-    $("#btn_book_this_order").live('click',function(){      
+    $("#btn_book_this_order").on('click',function(){      
         
         var mvalid = '';
          // checkbox check         
@@ -560,7 +560,7 @@ jQuery(function($){
     
     
     // shop view
-    $("#view_gh_shop").live('click',function(){
+    $("#view_gh_shop").on('click',function(){
         
         var mydata = {"action":"ajax_act_view_gh_shop"};
         var myreturn = 0;
@@ -590,7 +590,7 @@ jQuery(function($){
     });
     
     // change select items
-    $('select.shopping-cart-item-count').live('change',function(){
+    $('select.shopping-cart-item-count').on('change',function(){
         
         var productCount = $(this).val();        
         var productid = $(this).attr('rel');        
@@ -605,7 +605,7 @@ jQuery(function($){
     });
     
     // delete items in shopping cart
-    $('label.shopping-cart-item-del').live('click',function(){
+    $('label.shopping-cart-item-del').on('click',function(){
         
         var productid = $(this).attr('rel');        
         var mydata = {"action":"ajax_act_shopping_cart_delete_item","productId":productid};
@@ -618,7 +618,7 @@ jQuery(function($){
     
     
     // checkout shopping cart  step1 continue
-    $('#go-to-checkout').live('click',function(){
+    $('#go-to-checkout').on('click',function(){
         
         var holdResult = '#page-checkout-shopping-cart';          
         var mydata = {"action":"ajax_act_shopping_cart_load_continue"};
@@ -628,7 +628,7 @@ jQuery(function($){
     });
     
     // mshopping-payment click change
-    $('.mshopping-payment').live('click',function(){
+    $('.mshopping-payment').on('click',function(){
         var holdResult = '#checkout-load-form-paypal';
         var mval = $(this).val();
         if(mval=='cod')
@@ -652,7 +652,7 @@ jQuery(function($){
     });
     
     // Complete shopping cart step2
-    $('#mshopping-btn-complete').live('click',function(){
+    $('#mshopping-btn-complete').on('click',function(){
         
         
         var holdResult = '#page-checkout-shopping-cart'; 

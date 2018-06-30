@@ -37,7 +37,11 @@ function tie_slider_init(){
 function tie_slider_slides(){
 	global $post;
 	$custom = get_post_custom($post->ID);
-	$slider = unserialize( $custom["custom_slider"][0] );
+	if (isset($custom["custom_slider"][0]) && $custom["custom_slider"][0])
+		$slider = unserialize( $custom["custom_slider"][0] );
+	else{
+		$slider = null;
+	}	
   
 	wp_enqueue_script( 'tie-admin-slider' );  
 	wp_print_scripts('media-upload');
@@ -97,8 +101,8 @@ function tie_slider_slides(){
 
 	<ul id="tie-slider-items">
 	<?php
-	if( $slider ){
 	$i=0;
+	if( $slider ){	
 	foreach( $slider as $slide ):
 		$i++; ?>
 		<li id="listItem_<?php echo $i ?>"  class="ui-state-default">

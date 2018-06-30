@@ -1,0 +1,132 @@
+@media (min-width: 992px) {
+    
+    #menu-primary {
+        li ul.sub-menu{
+            display: none;
+            position: absolute;
+            top: 32px;
+            left: 0;
+            width: 220px;
+            box-shadow: 0px 6px 7px #bbb;    
+            background-color: #fff;
+        }
+    }
+
+    #c_dmsp_hold{
+        ul.sub-menu{
+            display: none;
+            position: absolute;
+            top: -4px;
+            left: 220px;
+            width: 220px;
+            box-shadow: 0px 6px 7px #bbb;    
+            background-color: #fff;
+        }
+    }
+    
+    
+    .search_top_header {
+        min-width: 600px;
+    }
+
+    &.c_header{
+        height:80px; 
+    }
+
+    .b_header{
+        height:32px; 
+        border-bottom:2px solid $main_color; 
+        background:url(../images/layout/b_header.png) 
+        repeat-x; 
+        z-index:10; 
+        width:100%;
+    }
+
+    .navbar-expand-lg{
+        .navbar-collapse{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 92px;
+        }
+    }
+
+    #menu-primary{
+        position: absolute;
+        left: 130px;
+    }
+
+    .tools_header{
+        height:30px; 
+        position:absolute; 
+        right:0;
+    }
+    
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse{
+        border-top: 1px solid $main_color;
+        padding: 10px;
+    }
+
+    #menu-primary {
+        li ul.sub-menu {
+            padding-left: 20px;
+        }
+    }
+    
+    .search_top_header{
+        // display: none;
+        position: absolute;
+        right: 15px;
+        top: 76px;
+        width: 100%;
+        padding-left: 260px;
+        max-width: 100%;
+    }
+
+    header{
+        .hotline{
+            right: 110px;
+            top: 15px;
+        }
+    }
+    
+    .navbar-dark .navbar-toggler {
+        color: $main_color;
+        border-color: $main_color;
+        background: $main_color;
+    }
+
+    .rightcol{
+        float:right; 
+        width:100%;
+    
+        .adv_rightcol{
+            
+            img{
+                width: 100%;
+                height: auto;
+            }
+    
+            .mb-4{
+                margin: 0!important;
+                padding: 5px;
+            }
+        }
+    }
+
+    header .ct_dmsp, header .m_dmsp{
+        top: 10px;
+    }
+
+    /** Single **/
+    .single {
+        h1.title_ttpd {
+            margin-top: 20px;
+        }
+    }
+}
+@media (max-width: 767px) {}
+@media (max-width: 575px) {}
