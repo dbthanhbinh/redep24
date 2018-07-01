@@ -9,21 +9,21 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />  
     <!-- Bootstrap core CSS -->
-    <link href="<?= get_template_directory_uri()?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= get_template_directory_uri()?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">    
+    <?php wp_head();?>
 
+    <!-- cslider -->
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/plugin/cslider/css/jquery.cslider.css" />
     <!-- Custom styles for this template -->
     <link href="<?= get_template_directory_uri()?>/assets/css/style.min.css" rel="stylesheet">
 
-    <?php wp_head();?>
     <?php 
         if(tie_get_option('header_code'))
         {
             echo tie_get_option('header_code');
         }        
     ?>
-
-    <!-- cslider -->
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/plugin/cslider/css/jquery.cslider.css" />
     <!-- Bootstrap core JavaScript -->
     <script src="<?= get_template_directory_uri()?>/assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?= get_template_directory_uri()?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -32,7 +32,7 @@
     
 </head>
 <body <?php body_class();?>>
-    <header>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </script>
+    <header class="site-header">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </script>
         <div id="header">                
             <?php if(tie_get_option('top_menu')):?>        
                 <div class="t_header">

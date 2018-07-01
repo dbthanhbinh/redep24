@@ -29,12 +29,12 @@ if(!function_exists("webseo24htheme_setup")):
     function webseo24htheme_setup()
     {
         //// Re-define meta box path and URL
-        define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri() . '/admins/meta-box' ) );
-        define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH . '/admins/meta-box' ) );
-        //// Include the meta box script
-        require_once RWMB_DIR . 'meta-box.php';
-        //// Include the meta box definition (the file where you define meta boxes, see `demo/demo.php`)
-        require_once TEMPLATEPATH.'/admins/meta-box/demo/demo.php';
+        // define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri() . '/admins/meta-box-4141' ) );
+        // define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH . '/admins/meta-box/' ) );
+        // //// Include the meta box script
+        require_once trailingslashit( STYLESHEETPATH . '/admins/meta-box-4141/' ) . 'meta-box.php';
+        // //// Include the meta box definition (the file where you define meta boxes, see `demo/demo.php`)
+        // require_once TEMPLATEPATH.'/admins/meta-box/demo/demo.php';
        
          // Remove default
         require_once TEMPLATEPATH.'/admins/rewrites/remove-category-slug.php';

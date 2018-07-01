@@ -11,7 +11,7 @@ and open the template in the editor.
 
 .popup_300_title{
     color: #fff;
-    width: 95%;
+    width: 100%;
     height: 30px;
     line-height: 30px;
     display: block;
@@ -24,4 +24,4 @@ and open the template in the editor.
     padding: 10px;
     line-height: 20px;
 }
-.popup_300_popup_content .popupclosebtn{bottom: 0; top: initial;}
+.popup_300_popup_content .popupclosebtn{top: 0;}

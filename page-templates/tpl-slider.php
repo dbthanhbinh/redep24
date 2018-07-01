@@ -12,7 +12,7 @@
     <!-- mask elemet use for masking background image -->
     <div class="mask"></div>
     <!-- All slides centred in container element -->
-    <div class="container">
+    <div class="">
         <?php 
         $i = 1;
         while ( $custom_slider->have_posts() ) : $custom_slider->the_post(); $i++; 

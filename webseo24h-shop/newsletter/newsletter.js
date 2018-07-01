@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 function public_remove_popup_newsletter()
 {
    $("#ws24h_background_popup_message").html(""); 
@@ -22,7 +16,7 @@ function public_add_popup_300(holdResult,msg)
     html += "<div class='site-block-popup-content popup_300_popup_content' id='site-block-popup-content' style='position:absolute; width:"+mwidth+"px; top:15%; left:" + block_pos + "px; min-height:100px; opacity:1; z-index:9999;'>\n\
              <div class='popup_300_title'> Thông báo! </div>\n\
              <div class='popup_300_content'> " + msg + " </div>\n\
-             <div class='popupclosebtn'> <a title='Close popup' onclick='public_remove_popup_newsletter();' href='#'> </a> </div> </div> ";       
+             <div class='popupclosebtn'> <a title='Close popup' onclick='public_remove_popup_newsletter();' href='#'> <i class='icon-remove'></i> </a> </div> </div> ";       
 
     $(holdResult).html(html);
     $('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -30,7 +24,7 @@ function public_add_popup_300(holdResult,msg)
 
 
 
-$("#act_newsletter_btn").live('click',function(){
+$("#act_newsletter_btn").on('click',function(){
     
     var newsletter = $('#newsletter_input').val();
     

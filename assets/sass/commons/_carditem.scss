@@ -1,0 +1,25 @@
+.card-item{
+    .card{
+        border: 1px solid $gray_color_opacity;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        &:hover {
+            border-color: $red_color;
+        }
+    }
+
+    
+    .group-price{
+        text-align: center;
+        span{
+            color:$new_price_color;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .pri1_wf{ color:$old_price_color; text-decoration:line-through;}
+        .pri2_wf{}
+    }
+}

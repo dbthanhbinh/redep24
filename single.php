@@ -10,98 +10,18 @@
             <div class="clear-30"></div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="slider_img_pd">                        	
-                        <div class="top_sipd">                            
-                            <?php 
-                            $photos = get_post_meta(get_the_ID(), $wpdb->prefix.'photos', FALSE); // list photos
+                    <?php include TEMPLATEPATH . '/page-templates/tpl-single-cf.php'?>  
+                    <?php 
+                    if(has_post_thumbnail()):
+                    ?>
+                        <div class="screen-thumb">
+                            <?php
+                                include TEMPLATEPATH . '/modules/single_slider/elevatezoom-master/setting.php'
                             ?>
-                            <div id="slider2" class="flexslider">                                
-                                <ul class="bxslider">                                    
-                                    <?php 
-                                    if($photos)
-                                    {
-                                        foreach ($photos as $key=>$value) 
-                                        {
-                                            $mthumb = webseo24h_tie_thumb_multiple($value, 'medium',FALSE);
-                                            if($mthumb):
-                                            ?>
-                                            <li>
-                                                <div class="sl_ca">
-                                                    <table>
-                                                        <tr>
-                                                            <td>
-                                                            <?php echo $mthumb;?>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </li>
-                                            <?php
-                                            endif;
-                                        }
-                                    }
-                                    else {
-                                    ?>
-                                        <li>
-                                            <div class="sl_ca">
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                        <?php 
-                                                        if(has_post_thumbnail())
-                                                            the_post_thumbnail('medium');
-                                                        ?>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </li>    
-                                    <?php    
-                                    }
-                                    ?>
-                                    
-                                </ul>
-
-                                    <div id="bx-pager">
-                                    <?php 
-                                    if($photos)
-                                    {
-                                        $tamp = 0;
-                                        foreach ($photos as $key=>$value) 
-                                        {
-                                            $mthumb = webseo24h_tie_thumb_multiple($value, 'thumbnail',FALSE);
-                                            if($mthumb):
-                                            ?>
-                                            <div class="sl_ca">
-                                                <a data-slide-index="<?php echo $tamp;?>" href="">
-                                                    <?php echo $mthumb;?>
-                                                </a> 
-                                            </div>    
-                                            <?php
-                                            endif;
-                                            
-                                            $tamp++;
-                                        }
-                                    }
-                                    else
-                                    {
-                                    ?>
-                                    <div class="sl_ca">
-                                        <a data-slide-index="<?php echo '1';?>" href="">
-                                                <?php 
-                                                if(has_post_thumbnail())
-                                                    the_post_thumbnail('thumbnail');
-                                                ?>
-                                            </a> 
-                                        </div>   
-                                    <?php  
-                                    }
-                                    ?>                                         
-                                    </div>
-                                
-                            </div>                            
                         </div>
-                    </div>
+                    <?php 
+                    endif;
+                    ?>
                 </div>
                 
                 <div class="col-lg-6">

@@ -340,7 +340,7 @@ function db_remove_popup_html(productId)
 
 function public_show_popup_custom(msg,tamproductid)
 {
-    var popupclose = '<div class="popupclosebtn"> <a href="#" onclick="db_remove_popup_html(' + tamproductid + ');"> </a> </div>';
+    var popupclose = '<div class="popupclosebtn"> <a href="#" onclick="db_remove_popup_html(' + tamproductid + ');"> <i class="icon-remove"></i> </a> </div>';
     msg += popupclose;
     $('#site-block-popup-content').html(msg);
 }

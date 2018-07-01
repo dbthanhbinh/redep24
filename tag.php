@@ -1,7 +1,7 @@
 <?php get_header();?>
     <div class="container-fluid">
         <div class="row">
-            <?php  require_once 'page-templates/breadcrumbs.php'; ?>
+            <?php  // require_once 'page-templates/breadcrumbs.php'; ?>
             <div class="col-lg-9">
                 <h1 class="header_title t_r_tlsp">
                     <span><?php single_cat_title('',true);?></span>

@@ -192,6 +192,7 @@ li.li_m_dmsp ul.sub-menu li:hover ul.sub-menu{display:block;}
 	overflow:hidden;
 	padding-left:240px; 
 	min-height: 420px;
+	padding-right: 0;
 }
 
 .msadasd{margin-left:0 !important;}
@@ -378,10 +379,7 @@ li:hover .sp_i_wf img{
 .name_wf a{color:#004B91; line-height: 18px}
 .name_wf2 a{color:#004B91;}
 .full_width ul li:hover .name_wf a, .full_width2 ul li:hover .name_wf a{color:#e47911; text-decoration:underline;}
-.pri1_wf{display:block; color:#7A7A7B; text-decoration:line-through; padding-top:5px;}
-.pri2_wf{display:block; color:#E80000; padding-top:2px;}
 
-.group-price{width: 100%; text-align: center; height: 38px;}
 
 .f_dt{height:54px; border-top:1px solid #b5b3b3; border-bottom:1px solid #b5b3b3; overflow:hidden; padding:10px 0; position: relative;}
 .pagenavi{position: absolute; top: 40%;}

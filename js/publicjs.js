@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 function formatNumber (num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
@@ -79,6 +73,8 @@ jQuery(function($){
     $('#ct_dmsp_parent').click(function(){
         $(this).parent().toggleClass('open');
     });
+
+
 });
 
 

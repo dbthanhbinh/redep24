@@ -8,7 +8,7 @@
 function newsletter_style_script()
 {
     echo '<link rel="stylesheet" type="text/css" href="'.  get_template_directory_uri().'/webseo24h-shop/newsletter/newsletter.css"/>';
-    // echo '<script type="text/javascript" src="'.  get_template_directory_uri().'/webseo24h-shop/newsletter/newsletter.js"></script>';
+    echo '<script type="text/javascript" src="'.  get_template_directory_uri().'/webseo24h-shop/newsletter/newsletter.js"></script>';
 }
 
 add_action('wp_footer', 'newsletter_style_script');
