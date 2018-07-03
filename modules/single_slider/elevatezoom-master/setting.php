@@ -3,9 +3,9 @@
 
 <div class="sp-wrap" style="position: relative; max-width: 100%;">
     <?php 
-    if($post_metas[$wpdb->prefix .'photos']):        
+    if(!empty($photos)):       
         $ttm = 1;
-        foreach($post_metas[$wpdb->prefix .'photos'] as $va)
+        foreach($photos as $va)
         {
             if($ttm==1)
             {

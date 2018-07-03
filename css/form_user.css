@@ -28,9 +28,11 @@ width: 100%;
     background-color: #fff;
     width: 98%;
 }
-.ul_m_lfdn li{}
+.ul_m_lfdn li{
+    margin-bottom: 5px;
+}
 .ul_m_lfdn li + li{padding-top:15px;}
-.l_lfdn{width:100px; float:left; height:28px; line-height:28px; font-weight:bold; padding-right:10px;}
+.l_lfdn{width:100px; float:left; font-weight:bold; padding-right:10px;}
 .r_lfdn{overflow:hidden;}
 .checkbox_i_agree{float:left; width:99%;}
 

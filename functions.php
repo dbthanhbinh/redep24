@@ -37,7 +37,7 @@ if(!function_exists("webseo24htheme_setup")):
         // require_once TEMPLATEPATH.'/admins/meta-box/demo/demo.php';
        
          // Remove default
-        require_once TEMPLATEPATH.'/admins/rewrites/remove-category-slug.php';
+        // require_once TEMPLATEPATH.'/admins/rewrites/remove-category-slug.php';
         
         // filter setting
         require_once TEMPLATEPATH.'/admins/filter/setting.php';

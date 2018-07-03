@@ -3,7 +3,7 @@
     margin: 0 auto;    
     position: relative;
     top: 25px;
-    z-index: 1;
+    z-index: ($main_header_index - 1);
 
     form {
         border:1px solid #ccc;    

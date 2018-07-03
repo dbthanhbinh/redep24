@@ -1,7 +1,7 @@
 <?php get_header();?>
     <div class="container-fluid">
         <div class="row">
-            <?php  require_once 'page-templates/breadcrumbs.php'; ?>
+            <?php  //require_once 'page-templates/breadcrumbs.php'; ?>
             <div class="col-lg-9">
                 <div class="clear-20"></div>        
                 <div class="row">
@@ -10,8 +10,9 @@
                             ?>
                             <div class="content-details col-lg-12">
                             <h1 class="t_r_tlsp">
-                                <span><?php the_title();?></span>
+                                <?php the_title();?>
                             </h1>
+                                <div class="clear-20"></div>
                                 <?php the_content();?>
                             </div>
                         <?php 

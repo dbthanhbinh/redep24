@@ -1,26 +1,23 @@
-<?php                     
-    $comment_postid = get_the_ID();        
-    $_postmetas = new postmetas(get_the_ID());
+<?php 
+    $comment_postid = get_the_ID();
+    $_postmetas = new postmetas(get_the_ID()); 
     
-    $post_metas     = get_post_custom(get_the_ID());
-    $price 		    = $_postmetas->postmetas_get_multiple($wpdb->prefix.'price'); //$post_metas[$wpdb->prefix.'price'][0];
-    $discount 	    = $_postmetas->postmetas_get_multiple($wpdb->prefix.'discount'); //$post_metas[$wpdb->prefix.'discount'][0];
-    // $weight_ship 	= $_postmetas->postmetas_get_multiple($wpdb->prefix.'weight_ship'); //$post_metas[$wpdb->prefix.'weight_ship'][0];
+    $price              = $_postmetas->postmetas_get($wpdb->prefix.'price');  
+    $giasi              = $_postmetas->postmetas_get($wpdb->prefix.'price_si');  
+    $discount           = $_postmetas->postmetas_get($wpdb->prefix.'discount');
+    $code               = $_postmetas->postmetas_get($wpdb->prefix.'code');
+    $showpostview       = $_postmetas->postmetas_get($wpdb->prefix.'showpostview') ? $_postmetas->postmetas_get($wpdb->prefix.'showpostview') : 100;
+    $state              = $_postmetas->postmetas_get($wpdb->prefix.'state');
+    $area               = $_postmetas->postmetas_get($wpdb->prefix.'area');
+    $colors             = $_postmetas->postmetas_get_multiple($wpdb->prefix.'color');
+    $sizes              = $_postmetas->postmetas_get_multiple($wpdb->prefix.'size');
+    $photos             = $_postmetas->postmetas_get_multiple($wpdb->prefix.'photos');
     
-    // ////$obj_brand      = wp_get_object_terms(get_the_ID(),'nhan-hieu');						 	
-    // $xuatxu 	    = $_postmetas->postmetas_get_multiple($wpdb->prefix.'source'); //get_post_meta(get_the_ID(),$wpdb->prefix.'source',true);
-    // $state          = $_postmetas->postmetas_get_multiple($wpdb->prefix.'state'); //get_post_meta(get_the_ID(),$wpdb->prefix.'state',true);
+    $hidden_unit_price  = webseo24h_tie_format_price_discount_unitprice($price, $discount);
     
-    // $display_colors         = $_postmetas->postmetas_get_multiple($wpdb->prefix.'display_color');
-    // $colors                 = $_postmetas->postmetas_get_multiple_a($wpdb->prefix.'color');
-    
-    // $display_size           = $_postmetas->postmetas_get_multiple($wpdb->prefix.'display_size');
-    // $sizes                  = $_postmetas->postmetas_get_multiple_a($wpdb->prefix.'size');
-                            
     /****** Update showpostview ******/
-    $showpostview = $_postmetas->postmetas_get_multiple($wpdb->prefix.'showpostview'); //get_post_meta(get_the_ID(),$wpdb->prefix.'showpostview',true);
-    $tshowpostview = intval($showpostview);
-    $showpostviewnew  = $tshowpostview+1;						
+    $showpostview = intval($showpostview);
+    $showpostviewnew  = ($showpostview < 1000) ? 1000 : $showpostview++;
     update_post_meta(get_the_ID(), $wpdb->prefix.'showpostview',$showpostviewnew);
     /****** End Update showpostview ******/  
     ?>

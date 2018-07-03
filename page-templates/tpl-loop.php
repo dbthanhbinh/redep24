@@ -4,7 +4,7 @@
     $discount = (isset($postmetas[$wpdb->prefix.'discount'][0]) && $postmetas[$wpdb->prefix.'discount'][0]) ? $postmetas[$wpdb->prefix.'discount'][0] : '';     
 ?>
 
-<div class="col-lg-3 col-md-6 mb-4 card-item">
+<div class="col-lg-3 col-md-4 mb-4 card-item">
     <div class="card h-100">
         <?php
         if(has_post_thumbnail()){   

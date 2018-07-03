@@ -7,8 +7,10 @@ $gray_color_opacity: #eeeeee;
 
 /*** Index ***/
 $main_header_index: 100;
-$main_menu_index: 100;
+$main_menu_index: ($main_header_index + 1);
 $main_slider_index: 90;
+$search_index: ($main_slider_index + 1);
+$main_menu_dmsp: ($main_slider_index + 2);
 
 $main_color: $yellow_color;
 $old_price_color: $gray_color;

@@ -100,7 +100,7 @@
                 $cl_item = 'm_dmsp';
         ?>
         <div id="c_dmsp_hold" class="c_dmsp_hold">
-            <div id="<?= $cl_item ?>_parent" class="c_dmsp">
+            <div id="ct_dmsp_parent" class="c_dmsp">
                 <span>Danh mục</span>
             </div>
             <div id="<?= $cl_item ?>" class="<?= $cl_item ?> hover_dmsp">        

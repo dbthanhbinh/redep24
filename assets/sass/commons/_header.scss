@@ -2,7 +2,7 @@ header{
     .ct_dmsp{display:none;}
     .c_dmsp_hold{
         position: relative;
-        z-index: 100;
+        z-index: $main_menu_dmsp;
     }
     .hotline{
         position:absolute; 

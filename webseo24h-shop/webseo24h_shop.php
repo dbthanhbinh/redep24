@@ -653,19 +653,7 @@ class ws24hShop
                         '.$this->shop_show_price_format_prefix($this->shopCartGetTotalPriceEnd(), 0).'                                        
                     </td>
                 </tr> 
-            </table>
-
-            <ul style="margin-top:10px;" class="ul_m_lfdn">
-                <li>
-                    <div class="l_lfdn">
-                        &nbsp;
-                    </div>
-                    <div class="r_lfdn">
-                        <input class="btn_lfdn" '.$disabled.' id="btn_book_this_order" style="float:right;" type="submit" value="Đặt đơn hàng này"/>
-                    </div>
-                    <div class="clear"></div>
-                </li>
-            </ul>';
+            </table>';
 
         return $html;
     }
@@ -777,8 +765,21 @@ class ws24hShop
                 </div>    
                 ';
         $html .= '<div id="hold_shop_reload_total_info">';
-        $html .= $this->shop_reload_total_info($disabled);
-        $html .= '</div>';        
+        $html .= $this->shop_reload_total_info($disabled);        
+        $html .= '</div>';
+        $html .= '
+                    <ul style="margin-top:10px;" class="ul_m_lfdn">
+                        <li>
+                            <div class="l_lfdn">
+                                &nbsp;
+                            </div>
+                            <div class="r_lfdn">
+                                <input class="btn_lfdn btn_book_this_order" '.$disabled.' id="btn_book_this_order" style="float:right;" type="submit" value="Đặt đơn hàng này"/>
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+                ';
         return $html;
     }
 
@@ -853,7 +854,7 @@ class ws24hShop
         $html =' 
 
             <div class="shopping-content">
-            <form action="'.$this->shopCheckoutUrlPage.'" method="POST">
+            <form action="'.$this->shopCartUrlPage.'" method="POST">
             ';
                 if($totalItems>0)
                 {

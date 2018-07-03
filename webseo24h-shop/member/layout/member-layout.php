@@ -576,6 +576,7 @@ function member_layout_form_check($form_check,$class_df,$display_name,$email,$ph
 function member_layout_form_is_loged($class_df)
 {
     global $member;
+    $html = '';
     $html .= '<ul class="ul_m_lfdn" style="'.$class_df.'">';
         $html .= ' 
                     <li>

@@ -5,7 +5,7 @@ nav {
         repeat-x bottom; 
         position:relative;
         top: -35px;
-        z-index: 50;
+        z-index: $main_menu_dmsp;
     }
 
     &.navbar-dark .navbar-collapse .nav-link{

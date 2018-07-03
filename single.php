@@ -22,39 +22,22 @@
                     <?php 
                     endif;
                     ?>
-                </div>
-                
+                </div>                
                 <div class="col-lg-6">
                     <div class="tt_pd">                                    
                         <h1 class="title_ttpd">
                             <?php the_title();?>
                         </h1>
-                        <?php 
-                        $comment_postid = get_the_ID();
-                        $_postmetas = new postmetas(get_the_ID()); 
-                        //print_r($_postmetas);                             
-                        $price              = $_postmetas->postmetas_get($wpdb->prefix.'price');  
-                        $giasi              = $_postmetas->postmetas_get($wpdb->prefix.'price_si');  
-                        $discount           = $_postmetas->postmetas_get($wpdb->prefix.'discount');
-                        $code               = $_postmetas->postmetas_get($wpdb->prefix.'code');
-                        $showpostview       = $_postmetas->postmetas_get($wpdb->prefix.'showpostview');
-                        $state              = $_postmetas->postmetas_get($wpdb->prefix.'state');
-                        $area               = $_postmetas->postmetas_get($wpdb->prefix.'area');
-                        $colors             = $_postmetas->postmetas_get_multiple($wpdb->prefix.'color');
-                        $sizes              = $_postmetas->postmetas_get_multiple($wpdb->prefix.'size');
                         
-                        $hidden_unit_price  = webseo24h_tie_format_price_discount_unitprice($price, $discount);                        
-                        ?>
                         <div style="margin-top: 3px; margin-bottom: 0px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">
                             
-                                <?php if($area):?>
+                            <?php if($area):?>
                             <?php echo '<b> Bán : ' .  webseo24h_tie_area_get_name($area) . '</b>';?>
                             <?php endif;?>
                             
                             <?php if($showpostview):?>    
                                 | <b><?php echo $showpostview;?></b>  Lượt xem.
-                            <?php endif;?>
-                            
+                            <?php endif;?>                            
                                 | Cập nhật : <b><?php the_date('d/m/Y');?></b>
                             
                         </div>
@@ -77,7 +60,7 @@
                             <?php if($code):?>
                             <div style="padding:5px 0; margin-top: 5px;">
                                 <span class="items-product-single">Mã sản phẩm</span>
-                                : <?php echo $code;?>
+                                <?php echo $code;?>
                             </div>
                             <?php endif;?>
 
@@ -88,7 +71,7 @@
                                         Tình trạng
                                     </div>
                                     <div class="r_ctpd">
-                                        : <?php echo webseo24h_tie_get_stock_state($state);?>
+                                        <?php echo webseo24h_tie_get_stock_state($state);?>
                                     </div>
                                     <div class="clear"></div>
                                 </li>  
@@ -122,7 +105,7 @@
 
                             <div style="padding:5px 0;">
                                 <span class="items-product-single">Số lượng</span>
-                                : <select id="single-select-num">
+                                <select id="single-select-num">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>

@@ -25,7 +25,12 @@
                 foreach( $slider as $slide ):
                     ?>
                     <div class="da-slide">
-                        <img src="<?php echo webseo24h_tie_slider_img_src( $slide['id'] , $size );?>" alt="<?php  echo stripslashes( $slide['title'] );?>" >
+                        <h2 class="fittext2"><?= stripslashes( $slide['title'] );?></h2>                        
+                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                        <a href="<?php  echo stripslashes( $slide['link'] );?>" class="da-link button">Read more</a>
+                        <div class="da-img">
+                            <img src="<?php echo webseo24h_tie_slider_img_src( $slide['id'] , $size );?>" alt="<?php  echo stripslashes( $slide['title'] );?>" width="320">
+                        </div>
                     </div>
                     <?php 
 

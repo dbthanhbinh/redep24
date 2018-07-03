@@ -252,21 +252,21 @@ function valid_elementFormInput()
     
     if(received_address)
     {
-       var this_form = new Array('fullname_this_check','email_this_check','phone_this_check','address_this_check');
+       var this_form = new Array('fullname_this_check','email_this_check','address_this_check');
        var other_form = new Array('fullname_other_check','email_other_check','phone_other_check','address_other_check');
-       var second =  $.merge(this_form,other_form);
+       var second =  $.merge(this_form, other_form);
        
         $.each(second, function( index, value ) 
         {
             var melementVal = $("#" + value).val();
             var melementRel = $("#" + value).attr('rel');
             //valid_element(this,melementVal,melementRel);
-            mvalid += get_valid_element("#" + value,melementVal,melementRel);
+            mvalid += get_valid_element("#" + value, melementVal, melementRel);
         });
     }
     else
     {
-        var this_form = new Array('fullname_this_check','email_this_check','phone_this_check','address_this_check');
+        var this_form = new Array('fullname_this_check','email_this_check','address_this_check');
        
         $.each(this_form, function( index, value ) 
         {
@@ -515,23 +515,19 @@ jQuery(function($){
     });
     
     /***** btn book this order ******/    
-    $("#btn_book_this_order").on('click',function(){      
-        
-        var mvalid = '';
-         // checkbox check         
-         //var im_agree = $('input[name=toidongy]:checked').val();  // chon dia chi giao hang
-         
+    $("#btn_book_this_order").on('click', function(e){
+        e.preventDefault();
+        console.log('=================')
+        var mvalid = '';       
          if(valid_elementCheckbox('i_agree'))
          { 
              $('#checkbox_i_agree').next('span').remove();
+
             // check payment method 
-            if(valid_elementRadio('payment_method'))
-            {
-                $('#payment_method_error').html("");            
-               if(valid_elementFormInput())
-               {
-                   if(valid_elementCitiesDistricts())
-                    {                        
+            if(valid_elementRadio('payment_method')){
+                $('#payment_method_error').html("");
+               if(valid_elementFormInput()){
+                   if(valid_elementCitiesDistricts()){
                         //var mydata = {"action":"ajax_act_shopping_cart_btn_complete"};
                         var mydata = public_get_mydata();
                         mydata.action = "ajax_act_shopping_cart_btn_complete";                
@@ -540,12 +536,10 @@ jQuery(function($){
                         var popup = 0;
                         public_process_ajax_send_data_complete(mydata,myreturn,holdResult,popup);                
                         $('#shopping-cart-hold-success').html(db_success_order());
-                        
                     }
                }               
             }
-            else
-            {
+            else {
                 $('#payment_method_error').html("<span class='error'>Chọn phương thức thanh toán</span>");
                 $('#payment_method').focus();
             }
@@ -590,18 +584,15 @@ jQuery(function($){
     });
     
     // change select items
-    $('select.shopping-cart-item-count').on('change',function(){
-        
+    $('body').on('change', 'select.shopping-cart-item-count',function(e){
+        e.preventDefault();
         var productCount = $(this).val();        
         var productid = $(this).attr('rel');        
         var mydata = {"action":"ajax_act_shopping_cart_update_item","productId":productid,"productCount":productCount};
         var myreturn = 0;
         var holdResult = '#page-content-shopping-cart';  // load again content shopping cart after delete item
         var popup = '';
-        public_process_ajax_send_data(mydata,myreturn,holdResult,popup);   
-        
-        //shopjs_loadding_data_shopping_icon();
-        
+        public_process_ajax_send_data(mydata,myreturn,holdResult,popup); 
     });
     
     // delete items in shopping cart

@@ -1,10 +1,13 @@
 <?php get_header();?>
     <div class="container-fluid">
         <div class="row">
-            <?php  //require_once 'page-templates/breadcrumbs.php'; ?>
+            <?php 
+                // show breadcrumbs
+                require_once 'page-templates/breadcrumbs.php';
+            ?>
             <div class="col-lg-9">
                 <h1 class="header_title t_r_tlsp">
-                    <span>Tìm kiếm : <?php echo get_query_var('s');?></span>
+                    <span><?php single_cat_title('',true);?></span>
                 </h1>
                 <div class="row product-list">
                     <?php 

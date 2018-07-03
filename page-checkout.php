@@ -1,47 +1,34 @@
-<?php get_header();?>
 <?php
-if($member->member_check_login())
-    wp_redirect($ws24hShop->shopCartUrlPage);
-//print_r($_SESSION);
+    if($member->member_check_login())
+        wp_redirect($ws24hShop->shopCartUrlPage);
 ?>
-<body>
-
-    <!-- #wrapper -->
-    <div id="wrapper">
-        
-        <div id="container">
-        
-            
-            <div id="container">
-                <div class="wrap_prod">
-                    
-                    <?php 
-                        get_sidebar();
-                    ?> 
-                    <div class="right_tlsp" <?php webseo24h_left_right_sidebar_class($layout='main');?>>
-                        <div style="padding-top: 0;" class="form_user">
-
-                            <div class="form_dn">
-
-                                <?php                                 
-                                    echo $ws24hShop->shop_loop_shopping_cart_check_out();
-                                ?>   
-
-
-                                <div class="clear"></div>
-
-                            </div><!-- End .form_dn -->
-
-                        </div><!-- End .form_user -->
-                    </div>
-                </div>
-        
-            </div><!-- End #container -->
-            
-           
-        </div><!-- End #container -->
+<?php get_header();?>
     
-    </div><!-- End #wrapper -->
-
-</body>
+    <div class="container-fluid">
+        <div class="row">
+            <?php  //require_once 'page-templates/breadcrumbs.php'; ?>
+            <div class="col-lg-9">
+                <div class="clear-20"></div>        
+                <div class="row">
+                    <?php 
+                        if(have_posts()):the_post();
+                            ?>
+                            <div class="content-details col-lg-12">
+                            <h1 class="t_r_tlsp">
+                                <?php the_title();?>
+                            </h1>
+                                <div class="clear-20"></div>
+                                <?php the_content();?>
+                            </div>
+                        <?php 
+                        endif;
+                        ?>
+                </div>
+            </div>
+            <?php 
+                get_sidebar();
+            ?>
+            <?php get_template_part('page-templates/tpl', 'partner');?> 
+        </div>
+    </div>
 <?php get_footer();?>
