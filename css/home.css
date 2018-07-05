@@ -1,8 +1,5 @@
 /************************************** BEGIN header ******************************************/
 
-#header{}
-
-.t_header{height:25px; background:#000; position:relative; padding:0 10px;}
 .mn_t_header{position:absolute; top:0; right:10px;}
 .mn_t_header ul li{float:left; font-size:11px; color:#bdbdbd;}
 .mn_t_header ul li a{
@@ -12,8 +9,7 @@
         white-space: nowrap;
 }
 .mn_t_header ul li a:hover{color:#fda700;}
-.note_t_header{line-height:25px; color:#9f9f9f;}
-.note_t_header span{color:#fda700;}
+
 
 .logo{
 	background:url(../images/layout/logo.png) no-repeat; 

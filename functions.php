@@ -1,10 +1,4 @@
 <?php
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 if(!session_id())
 {   
     session_set_cookie_params(0);
@@ -41,9 +35,10 @@ if(!function_exists("webseo24htheme_setup")):
         
         // filter setting
         require_once TEMPLATEPATH.'/admins/filter/setting.php';
+        require_once TEMPLATEPATH.'/admins/filter/filter.php';
         
         // Enable support for Post Thumbnails, and declare two sizes.
-	add_theme_support( 'post-thumbnails' );  // 180 x 180
+	    add_theme_support( 'post-thumbnails' );  // 180 x 180
         add_image_size('mini-thumbnails', 60, 60, true); // 46x46
         add_image_size('medium', 470, 470, true);
        
@@ -51,18 +46,15 @@ if(!function_exists("webseo24htheme_setup")):
         add_post_type_support('page', 'excerpt');
         
         // This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-                        'top-menu'   => __( 'Top primary menu (top-menu)', THEME_NAME ),
-                        'primary' => __( 'Primary menu (primary)', THEME_NAME ),
-                        'cat-menu' => __( 'Category menu (cat-menu)', THEME_NAME ),
-                        'member-menu' => __( 'Member menu (member-menu)', THEME_NAME ),
-                        'footer-menu-buyer' => __( 'Footer menu Buyer (footer-menu-buyer)', THEME_NAME ),
-                        'footer-menu-seller' => __( 'Footer menu Seller(footer-menu-seller)', THEME_NAME ),
-                    ) 
-                );
-    
-        
-        
+	    register_nav_menus( array(
+                'top-menu'   => __( 'Top primary menu (top-menu)', THEME_NAME ),
+                'primary' => __( 'Primary menu (primary)', THEME_NAME ),
+                'cat-menu' => __( 'Category menu (cat-menu)', THEME_NAME ),
+                'member-menu' => __( 'Member menu (member-menu)', THEME_NAME ),
+                'footer-menu-buyer' => __( 'Footer menu Buyer (footer-menu-buyer)', THEME_NAME ),
+                'footer-menu-seller' => __( 'Footer menu Seller(footer-menu-seller)', THEME_NAME ),
+            ) 
+        );
     }
 endif;
 add_action( 'after_setup_theme', 'webseo24htheme_setup' );
@@ -92,12 +84,3 @@ include (TEMPLATEPATH . '/modules/lazyload/setting.php');
 
 // stick div sidebar
 include (TEMPLATEPATH . '/modules/stick_div/setting.php');
-
-// Remove blog slug trong permalink
-
-// End remove blog slug
-
-// nam hien tại
-
-////$currentY = date('Y');
-////echo 'fas: '.$currentY;

@@ -4,8 +4,8 @@ nav {
         background:#fff url(../images/layout/c_header.png) 
         repeat-x bottom; 
         position:relative;
-        top: -35px;
         z-index: $main_menu_dmsp;
+        top: -35px;
     }
 
     &.navbar-dark .navbar-collapse .nav-link{

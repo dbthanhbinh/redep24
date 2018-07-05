@@ -1,3 +1,19 @@
+.t_header{
+    background:#000; 
+    position:relative; 
+    padding:0 10px;
+
+    .slogan-1{
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .note_t_header{
+        line-height:25px; color:#9f9f9f;
+        span{color:#fda700; display: inline-block}
+    }
+}
+
 header{
     .ct_dmsp{display:none;}
     .c_dmsp_hold{
@@ -6,7 +22,7 @@ header{
     }
     .hotline{
         position:absolute; 
-        top:50px; 
+        top:25px; 
         right:20px; 
         font-size:26px; 
         font-weight:bold; 

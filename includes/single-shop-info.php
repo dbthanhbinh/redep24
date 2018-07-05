@@ -1,24 +1,18 @@
 <?php
 function webseo24h_tie_single_shop_info()
 {
-    global $authordata;   
+    global $authordata;
     $create_date = $authordata->user_registered;
     $create_email = $authordata->user_email;    
     $author_meta = get_user_meta(get_the_author_meta('ID'));
-    //print_r(get_user_meta(get_the_author_meta('ID')));
-        
-    
 ?>
-<div class="ttch_shop_pd">
-                    
+<div class="ttch_shop_pd">                    
     <div class="m_spd">
-
         <h4 class="t_spd">
             Bởi: 
             <?php echo '<a class="author-link" href="'.get_author_posts_url($authordata->ID).'">'.$author_meta['nickname'][0].'</a>';?>
             <a class="home_t_spd" href="#" title=""></a>
         </h4><!-- End .t_spd -->
-
         <div class="f_spd">
             <ul>
                 <?php if($create_date):?>
@@ -154,13 +148,12 @@ function webseo24h_tie_single_shop_info()
     <?php endif;?>
     
     <?php if(tie_get_option('note_shop_vip')):?>
-    <div class="img_ctgh">
+        <div class="img_ctgh">
             <center>
-                    <a href="#" title=""></a>
-        </center>
-    </div><!-- End .img_ctgh -->
+                <a href="#" title=""></a>
+            </center>
+        </div><!-- End .img_ctgh -->
     <?php endif;?>
-
 </div><!-- End .ttch_shop_pd -->
 <?php
 }

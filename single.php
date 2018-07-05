@@ -226,7 +226,8 @@
                     </div>
                 </div>
             </div>
-            <?php // require_once 'includes/single-spkcgh.php'; ?>
+            
+            <?php require_once 'includes/single-related.php'; ?>
         </div>
         <?php 
             get_sidebar();

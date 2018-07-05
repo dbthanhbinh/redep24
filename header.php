@@ -32,99 +32,107 @@
     
 </head>
 <body <?php body_class();?>>
-    <header class="site-header">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </script>
-        <div id="header">                
-            <?php if(tie_get_option('top_menu')):?>        
-                <div class="t_header">
-                    <div class="note_t_header">
-                        <?php if(tie_get_option('slogan1')):?>
-                            <?php echo tie_get_option('slogan1');?>
-                        <?php endif;?>
-                        <span>
-                            <?php if(tie_get_option('slogan2')):?>
-                                <?php echo tie_get_option('slogan2');?>
+    <div id="header">
+        <div class="row"> 
+            <div class="container-fluid">              
+                <?php if(tie_get_option('top_menu')):?>        
+                    <div class="t_header">
+                        <div class="note_t_header">
+                            <?php if(tie_get_option('slogan1')):?>
+                                <div class="slogan-1">
+                                <?php echo tie_get_option('slogan1');?>
+                                </div>
                             <?php endif;?>
-                        </span>
-                    </div>
+                            <span>
+                                <?php if(tie_get_option('slogan2')):?>
+                                    <?php echo tie_get_option('slogan2');?>
+                                <?php endif;?>
+                            </span>
+                        </div>
 
-                    <div class="mn_t_header">                        
-                        <?php wp_nav_menu( array( 'container_class' => 'top-menu', 'theme_location' => 'top-menu','fallback_cb' => 'webseo24h_tie_nav_fallback' ) ); ?>                
-                    </div>
+                        <div class="mn_t_header">                        
+                            <?php wp_nav_menu( array( 'container_class' => 'top-menu', 'theme_location' => 'top-menu','fallback_cb' => 'webseo24h_tie_nav_fallback' ) ); ?>                
+                        </div>
 
-                </div><!-- End .t_header -->
-            <?php endif;?>
+                    </div><!-- End .t_header -->
+                <?php endif;?>
+            </div>
         </div>
-        <?php get_search_form();?>
-        <div class="hotline"><span></span><?php tie_show_option('company_hotline');?></div>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark c_header">
+    </div>
+    <header class="site-header">
+        <div class="row">
             <div class="container-fluid">
-                <?php webseo24h_tie_logo_show();?>                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse b_header" id="navbarResponsive"> 
-                    <?php 
-                    $defaults = array(
-                        'theme_location'  => 'primary',
-                        'menu'            => '',
-                        'container'       => '',
-                        'container_class' => '',
-                        'container_id'    => '',
-                        'menu_class'      => 'menu',
-                        'menu_id'         => '',
-                        'echo'            => true,
-                        'fallback_cb'     => 'webseo24h_tie_nav_fallback',
-                        'before'          => '',
-                        'after'           => '',
-                        'link_before'     => '',
-                        'link_after'      => '',
-                        'items_wrap'      => '<ul id="%1$s" class="navbar-nav ml-auto ul_mn_b_header">%3$s</ul>',
-                        'depth'           => 2,
-                        'walker'          => ''
-                    );
-        
-                    wp_nav_menu( $defaults );
-                    ?>
-                    <?php                     
-                        if(tie_get_option("top_menu_member")){
-                            do_action("do_top_menu_member");
-                        }
-                    ?>                
-                </div>
-            </div>
-        </nav>
-        <?php 
-            $cl_item = 'ct_dmsp';
-            if(is_home()||is_front_page()) 
-                $cl_item = 'm_dmsp';
-        ?>
-        <div id="c_dmsp_hold" class="c_dmsp_hold">
-            <div id="ct_dmsp_parent" class="c_dmsp">
-                <span>Danh mục</span>
-            </div>
-            <div id="<?= $cl_item ?>" class="<?= $cl_item ?> hover_dmsp">        
+                <?php get_search_form();?>
+                <div class="hotline"><span></span><?php tie_show_option('company_hotline');?></div>
+                <!-- Navigation -->
+                <nav class="navbar navbar-expand-lg navbar-dark c_header">            
+                    <?php webseo24h_tie_logo_show();?>                
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse b_header" id="navbarResponsive"> 
+                        <?php 
+                        $defaults = array(
+                            'theme_location'  => 'primary',
+                            'menu'            => '',
+                            'container'       => '',
+                            'container_class' => '',
+                            'container_id'    => '',
+                            'menu_class'      => 'menu',
+                            'menu_id'         => '',
+                            'echo'            => true,
+                            'fallback_cb'     => 'webseo24h_tie_nav_fallback',
+                            'before'          => '',
+                            'after'           => '',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'items_wrap'      => '<ul id="%1$s" class="navbar-nav ml-auto ul_mn_b_header">%3$s</ul>',
+                            'depth'           => 2,
+                            'walker'          => ''
+                        );
+            
+                        wp_nav_menu( $defaults );
+                        ?>
+                        <?php                     
+                            if(tie_get_option("top_menu_member")){
+                                do_action("do_top_menu_member");
+                            }
+                        ?>                
+                    </div>            
+                </nav>
                 <?php 
-                $catdefaults = array(
-                        'theme_location'  => 'cat-menu',
-                        'menu'            => '',
-                        'container'       => '',
-                        'container_class' => '',
-                        'container_id'    => '',
-                        'menu_class'      => 'menu',
-                        'menu_id'         => '',
-                        'echo'            => true,
-                        'fallback_cb'     => 'webseo24h_tie_nav_fallback',
-                        'before'          => '',
-                        'after'           => '',
-                        'link_before'     => '',
-                        'link_after'      => '',
-                        'items_wrap'      => '<ul id="%1$s" class="ul_m_dmsp hover_dmsp">%3$s</ul>',
-                        'depth'           => 3,
-                        'walker'          => new webseo24h_tie_mega_menu_walker()
-                );
-                wp_nav_menu( $catdefaults );
-                ?>  
+                    $cl_item = 'ct_dmsp';
+                    if(is_home()||is_front_page()) 
+                        $cl_item = 'm_dmsp';
+                ?>
+                <div id="c_dmsp_hold" class="c_dmsp_hold">
+                    <div id="ct_dmsp_parent" class="c_dmsp">
+                        <span>Danh mục</span>
+                    </div>
+                    <div id="<?= $cl_item ?>" class="<?= $cl_item ?> hover_dmsp">        
+                        <?php 
+                        $catdefaults = array(
+                                'theme_location'  => 'cat-menu',
+                                'menu'            => '',
+                                'container'       => '',
+                                'container_class' => '',
+                                'container_id'    => '',
+                                'menu_class'      => 'menu',
+                                'menu_id'         => '',
+                                'echo'            => true,
+                                'fallback_cb'     => 'webseo24h_tie_nav_fallback',
+                                'before'          => '',
+                                'after'           => '',
+                                'link_before'     => '',
+                                'link_after'      => '',
+                                'items_wrap'      => '<ul id="%1$s" class="ul_m_dmsp hover_dmsp">%3$s</ul>',
+                                'depth'           => 3,
+                                'walker'          => new webseo24h_tie_mega_menu_walker()
+                        );
+                        wp_nav_menu( $catdefaults );
+                        ?>  
+                    </div>
+                </div>
             </div>
         </div>
     </header>
